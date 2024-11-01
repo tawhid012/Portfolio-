@@ -1,223 +1,105 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tawhid Laskar - Portfolio</title>
-
+    <title>Modern Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<style> body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
-    color: #ddd;
-    margin: 0;
-    padding: 0;
-}
+    <header>
+        <nav class="navbar">
+            <div class="logo">Tawhid's Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="contact-btn">Get in Touch</button>
+        </nav>
+    </header>
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-}
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="highlight">Tawhid</span><br> Full Stack Developer Based in India</h1>
+            <p>Building user-friendly, interactive, and innovative web applications to bring your ideas to life.</p>
+            <button class="portfolio-btn">View Portfolio</button>
+            <div class="social-links">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="portrait.jpg" alt="Portrait of Tawhid">
+        </div>
+    </section>
 
-.header {
-    background-image: linear-gradient(rgba(6, 0, 0, 0.8), rgba(6, 0, 0, 0.8)), url('hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 100px 0;
-    text-align: left; /* Align header content to the left */
-}
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I’m a passionate full-stack web developer with experience in HTML, CSS, JavaScript, and Python. I enjoy solving problems and creating dynamic, interactive websites and applications. Let's make something great together!</p>
+    </section>
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>Portfolio Website</h3>
+                <p>Personal portfolio website showcasing projects, skills, and contact information.</p>
+            </div>
+            <div class="project-item">
+                <h3>Real Estate App</h3>
+                <p>A hybrid application for property listings, investment simulations, and agent interactions.</p>
+            </div>
+            <div class="project-item">
+                <h3>eLearning Platform</h3>
+                <p>An interactive platform with over 600 web development courses and user dashboards.</p>
+            </div>
+            <div class="project-item">
+                <h3>Trading eBook</h3>
+                <p>An in-depth 200-page guide covering all aspects of spot trading, candlestick analysis, and more.</p>
+            </div>
+        </div>
+    </section>
 
-.profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #fff;
-    margin-right: 30px; /* Margin to create space between image and text */
-}
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill-item">HTML5</div>
+            <div class="skill-item">CSS & Tailwind CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Firebase</div>
+            <div class="skill-item">Odoo</div>
+            <div class="skill-item">Responsive Design</div>
+        </div>
+    </section>
 
-.profile-text {
-    text-align: left; /* Align text to the left of the image */
-}
-
-.navigation ul {
-    list-style-type: none;
-}
-
-.navigation ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.navigation ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-}
-
-.navigation ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #6e9fff;
-    transition: transform 0.3s ease-in-out;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-}
-
-.navigation ul li a:hover {
-    color: #6e9fff;
-}
-
-.navigation ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.section {
-    padding: 60px 0;
-    text-align: left; /* Align section content to the left */
-}
-
-.section-header {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color: #6e9fff;
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #6e9fff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.8s ease-in-out;
-}
-
-.button:hover {
-    background-color: #4a78ff;
-    animation: pulse 0.8s ease infinite alternate;
-}
-
-@keyframes pulse {
-    to {
-        transform: scale(1.05);
-    }
-}
-
-.portfolio-item {
-    background-color: #333;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.8s ease-in-out;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
-}
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #888;
-    font-size: 14px;
-}
- </style>
-<div class="gcse-search"></div>
-<header class="header">
-    <div class="header-content">
-        <img src="/IMG_20240104_202633.jpg" alt="Profile Image" class="profile-image">
-        <div class="profile-text">
-            <h1>Tawhid Laskar</h1>
-            <p>Web Developer</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you have a project in mind or just want to say hi, feel free to reach out!</p>
+        <form action="https://example.com/submit-form" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
             
-        </div>
-    </div>
-    <nav class="navigation">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="container">
-    <section class="section" id="about">
-        <h2 class="section-header">About Me</h2>
-        <p>Hello, This is Tawhid Laskara role from Assam,India a class 8 student From Paramount Sr. Sec. School. I am passionate about web development and aspire to become a Software Engineer. I enjoy creating responsive and visually appealing websites using HTML, CSS, and JavaScript.</p>
-    </section>
-
-    <section class="section" id="portfolio">
-        <h2 class="section-header">Portfolio</h2>
-        <div class="portfolio-item">
-            <h3>Project 1: Personal Website</h3>
-            <p>A personal portfolio website showcasing my skills and projects. Built with HTML, CSS, and JavaScript.</p>
-            <a href="https://tawhidlaskar.netlify.app/#contact" class="button">View Project</a>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project 2:School Website</h3>
-            <p>A responsive School website with HTML, CSS, and media queries for different screen sizes.</p>
-            <a href="https://paramounteducation.42web.io/" class="button">View Project</a>
-        </div>
-        <div class="portfolio-item">
-            <h3>Project 3: JavaScript Game</h3>
-            <p>An interactive game developed using JavaScript, featuring animations and user interaction.</p>
-            <a href="#" class="button">View Project</a>
-        </div>
-        <!-- Add more portfolio items as needed -->
-    </section>
-
-    <section class="section" id="skills">
-        <h2 class="section-header">Skills</h2>
-        <ul class="skills-list">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Responsive Web Design</li>
-            <li>Bootstrap</li>
-            <li>Git & GitHub</li>
-            <li>Basic Python</li>
-            <li> My SQL </li>
-            <li> WordPress </li>
-            <li> Tailwind CSS</li>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
             
-            <!-- Add more skills as needed -->
-        </ul>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
     </section>
-
-    <section class="section" id="contact">
-        <h2 class="section-header">Contact</h2>
-        <p>Email: info.tawhid10@gmail.com</p>
-        <p>Phone: +919531428394</p>
-        <p>Location: Hailakandi, Assam, India</p>
-    </section>
-</div>
-
-<footer class="footer">
-    <p>&copy; 2024 Tawhid Laskar-Web Developer</p>
-</footer>
-
 </body>
-</html>
+                                                                    </html>
+                                                             
