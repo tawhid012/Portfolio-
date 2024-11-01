@@ -406,18 +406,19 @@ button[type="submit"]:hover {
     margin-bottom: 30px;
 }
 
-/* Card Container for Website Sales */
+/* Card Container in Column Layout */
 .card-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Arrange cards in a column */
     gap: 20px;
-    justify-content: center;
+    align-items: center; /* Center-align cards in the column */
 }
 
 /* Individual Website Card */
 .website-card {
     background-color: #151515;
-    width: 280px;
+    width: 100%;
+    max-width: 500px; /* Set a max width for better appearance */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -465,3 +466,4 @@ button[type="submit"]:hover {
 .buy-btn:hover {
     background-color: #e03d48;
 }
+
